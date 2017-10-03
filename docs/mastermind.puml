@@ -1,0 +1,16 @@
+@startuml
+
+actor player
+entity gameLogic
+control service
+database database
+rectangle API
+boundary browser
+
+player ..> browser
+browser ..> API
+API --> service
+service --> gameLogic
+gameLogic --> database
+
+@enduml
